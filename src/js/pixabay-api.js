@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-
 export async function processHttpRequest(searchQuery, page) {
 
   const response = await axios.get('https://pixabay.com/api', {
