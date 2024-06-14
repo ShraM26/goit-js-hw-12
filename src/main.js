@@ -20,7 +20,7 @@ const lightbox = new SimpleLightbox(".gallery a", {
 let page = 1;
 let inputValue;
 
-// ===========================================================================================
+// =============================================================================
 formElms.addEventListener("submit", async (e) => {
   e.preventDefault();
 
