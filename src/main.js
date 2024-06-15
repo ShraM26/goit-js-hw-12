@@ -42,11 +42,10 @@ formElms.addEventListener("submit", async (e) => {
   loader.style.display = "block";
 
   try {
-    const data = await processHttpRequest(inputValue);
+    const data = await processHttpRequest(inputValue, page);
 
     galleryElm.innerHTML = "";
-    page = 1;
-
+    
     if (data && data.hits.length === 0) {
       
       iziToast.error({
@@ -59,6 +58,7 @@ formElms.addEventListener("submit", async (e) => {
         theme: "dark",
         maxWidth: 450,
       });
+      
       galleryElm.innerHTML = "";
       loadMoreBtn.style.display = "none";
     } else {
