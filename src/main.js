@@ -24,7 +24,7 @@ formElms.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   inputValue = formElms.elements["input"].value.trim();
-
+  
   if (!inputValue) {
     iziToast.error({
       message: "Before executing the request, please enter its title!",
